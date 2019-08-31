@@ -3,7 +3,7 @@
     <div class="menu-div">
       <section class="menu-left">
         <img src="~assets/img/logo.png" />
-        VUE | SSR
+        VUE | NUXT
       </section>
       <section class="menu-right">
         <ul>

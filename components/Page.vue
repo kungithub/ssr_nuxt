@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <section>
-      <router-link :to="{ name: url, params: { pageIndex: 1 } }">
+      <router-link :to="{ name: toUrl, params: { pageIndex: 1 } }">
         第一页
       </router-link>
     </section>
@@ -10,12 +10,12 @@
       :key="i"
       :class="{ current: pageIndex == ix + 1 }"
     >
-      <router-link :to="{ name: url, params: { pageIndex: ix + 1 } }">
+      <router-link :to="{ name: toUrl, params: { pageIndex: ix + 1 } }">
         {{ ix + 1 }}
       </router-link>
     </section>
     <section>
-      <router-link :to="{ name: url, params: { pageIndex: pageCount } }">
+      <router-link :to="{ name: toUrl, params: { pageIndex: pageCount } }">
         最后一页
       </router-link>
     </section>
@@ -32,6 +32,9 @@ export default {
     url: { default: "" }
   },
   computed: {
+    toUrl() {
+      return this.url + "-pageIndex";
+    },
     pageCount() {
       return this.count % this.pageSize == 0
         ? this.count / this.pageSize

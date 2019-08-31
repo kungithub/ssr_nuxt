@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import axios from "../../common/http";
 import Menu from "~/components/Menu.vue";
 import page from "~/components/Page.vue";
 
@@ -30,24 +29,26 @@ export default {
     req,
     res,
     redirect,
-    error
+    error,
+    $axios
   }) {
-    let data = await axios.post(`/api/news/list`);
+    let data = await $axios.post(`/api/news/list`, {
+      page: params.pageIndex || 1
+    });
     return { ...data.data };
   },
   components: {
     vmenu: Menu,
     vpage: page
   },
+  // router.path是不一样的，不用监听
+  // watchQuery: ["pageIndex"],
   data() {
     return {
-      pageIndex: 1
+      pageIndex: this.$route.params.pageIndex || 1
     };
   },
   async created() {
-    // let data = await axios.get(`/api/data`);
-    // console.log("返回:", data);
-    // this.data = '嘻嘻嘻嘻嘻爱';
   }
 };
 </script>

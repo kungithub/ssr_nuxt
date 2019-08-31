@@ -30,14 +30,14 @@ module.exports = {
 ** Plugins to load before mounting the App
 */
   plugins: [
-    { src: '@/plugins/element-ui', ssr: false }
+    // { src: '@/plugins/element-ui', ssr: false }
     // '~/plugins/axios'
   ],
   /*
 ** Nuxt.js modules
 */
   modules: [
-    // ['@nuxtjs/axios', { baseURL: 'http://localhost:3000' }],
+    ['@nuxtjs/axios', { baseURL: 'http://localhost:3000' }],
   ],
   /*
   ** Build configuration

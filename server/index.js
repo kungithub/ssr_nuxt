@@ -3,12 +3,17 @@ const serverConfig = require('./config')
 const { Nuxt, Builder } = require('nuxt')
 const router = require('./router/router');
 const app = new Koa()
+const bodyParser = require('koa-bodyparser');
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
 config.dev = !(app.env === 'production')
 
+
+app.use(bodyParser());
+
 app.use(router.routes());
+
 
 async function start() {
     // Instantiate nuxt.js
