@@ -10,6 +10,14 @@ const config = require('../nuxt.config.js')
 config.dev = !(app.env === 'production')
 
 
+// test session
+app.use(async (ctx, next) => {
+    ctx.req.session = {
+        user: { name: 'test' }
+    };
+    await next();
+})
+
 app.use(bodyParser());
 
 app.use(router.routes());

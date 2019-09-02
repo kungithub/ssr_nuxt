@@ -37,6 +37,7 @@ export default {
     });
     return { ...data.data };
   },
+  middleware: "default",
   components: {
     vmenu: Menu,
     vpage: page
@@ -48,8 +49,7 @@ export default {
       pageIndex: this.$route.params.pageIndex || 1
     };
   },
-  async created() {
-  }
+  async created() {}
 };
 </script>
 
