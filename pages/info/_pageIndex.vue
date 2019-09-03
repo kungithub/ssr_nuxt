@@ -37,7 +37,10 @@ export default {
     });
     return { ...data.data };
   },
-  middleware: "default",
+  validate({ params }) {
+    // 必须是number类型
+    return /^\d+|$/.test(params.pageIndex);
+  },
   components: {
     vmenu: Menu,
     vpage: page
