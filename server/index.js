@@ -9,7 +9,6 @@ const bodyParser = require('koa-bodyparser');
 const config = require('../nuxt.config.js')
 config.dev = !(app.env === 'production')
 
-
 // test session
 app.use(async (ctx, next) => {
     ctx.req.session = {

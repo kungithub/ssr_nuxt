@@ -20,7 +20,9 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "mavon-editor": "^2.7.5",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "redis": "^2.8.0",
+    "redis-lru": "^0.6.0"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",

@@ -52,6 +52,7 @@ export default {
   justify-content: space-around;
   .menu-left {
     width: 370px;
+    font-size: 18px;
     img {
       height: 80px;
       vertical-align: middle;

@@ -2,6 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'universal',
+  redis: {
+    host: '172.30.3.206',
+    port: 6379
+  },
   /*
 ** Headers of the page
 */
@@ -16,6 +20,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  serverMiddleware: [
+    '~/server/cache.js'
+  ],
   /*
 ** Customize the progress-bar color
 */
