@@ -1,6 +1,10 @@
-# hello
+# Nuxt.js demo
 
-> My neat Nuxt.js project
+一个Nuxt demo，效果图如下
+
+![效果图1](https://github.com/kungithub/ssr_nuxt/blob/master/assets/img/1567558009.jpg?raw=true)
+
+
 
 ## Build Setup
 

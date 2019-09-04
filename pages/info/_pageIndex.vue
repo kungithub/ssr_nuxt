@@ -41,6 +41,7 @@ export default {
     // 必须是number类型
     return /^\d+|$/.test(params.pageIndex);
   },
+  middleware: "default",
   components: {
     vmenu: Menu,
     vpage: page
